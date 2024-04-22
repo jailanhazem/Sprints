@@ -73,4 +73,4 @@ public class addItemToCard_stepDef02
             // If any exception occurs, log failure message
             System.out.println("Product not added to cart: " + e.getMessage());
         }
-}
+}}
