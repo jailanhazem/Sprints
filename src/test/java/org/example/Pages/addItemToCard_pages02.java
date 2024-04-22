@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class addItemToCard_pages02
 {
     public addItemToCard_pages02() {
+
         PageFactory.initElements(Hooks.driver,this);
     }
 
