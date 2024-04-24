@@ -1,5 +1,6 @@
 package org.example.StepDef;
 
+import com.fasterxml.jackson.core.JsonParseException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -19,13 +20,18 @@ public class addItemToCard_stepDef02
     public void open_the_browser_and_select_random_product() {
         try {
             WebElement productTitle = driver.findElement(By.className("product-title"));
-            productName =productTitle.getText();
-            System.out.println("Product Name Is:" +productName);
+            productName = productTitle.getText();
+            System.out.println("Product Name Is:" + productName);
             addItemToCard.randomProduct.click();
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
+
             System.out.println("Error occurred while selecting random product: " + e.getMessage());
             Assert.fail("Failed to select the product.");
         }
+
+
+
     }
 
     @And("click add to cart button")
